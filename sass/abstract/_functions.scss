@@ -1,8 +1,10 @@
 @function col-size($totalColumns, $columnSpan) {
   @if $columnSpan > 1 {
     @return calc(
-      ((100% - #{($totalColumns - 1) * $gutter-horizontal}) * #{$columnSpan} /
-        #{$totalColumns}) + #{$gutter-horizontal}
+      (
+          (100% - #{($totalColumns - 1) * $gutter-horizontal}) * #{$columnSpan} /
+            #{$totalColumns}
+        ) + #{$gutter-horizontal}
     );
   } @else {
     @return calc(

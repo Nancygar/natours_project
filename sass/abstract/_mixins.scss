@@ -6,3 +6,31 @@
     clear: both;
   }
 }
+
+@mixin gradient-text($light: $color-primary-light, $dark: $color-primary-dark) {
+  display: inline-block;
+  background-image: linear-gradient(to right, $light, $dark);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@mixin translate-and-scale($translateY, $scale) {
+  transform: translateY($translateY) scale($scale);
+}
+
+@mixin skewY-parent-and-child($angle) {
+  transform: skewY(-$angle);
+
+  & > * {
+    transform: skewY($angle);
+  }
+}
+
+@mixin center-absolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+

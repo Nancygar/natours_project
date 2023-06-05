@@ -44,17 +44,9 @@ body {
   font-size: 3.5rem;
   text-transform: uppercase;
   font-weight: 700;
-  background-image: linear-gradient(
-    to right,
-    $color-primary-light,
-    $color-primary-dark
-  );
   letter-spacing: .2rem;
-
-  display: inline-block;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  
+  @include gradient-text($color-primary-light, $color-primary-dark);
 
   transition: all 0.2s;
 

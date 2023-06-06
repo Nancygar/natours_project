@@ -27,10 +27,25 @@
   }
 }
 
+@mixin skewX-parent-and-child($angle) {
+  transform: skewX(-$angle);
+
+  & > * {
+    transform: skewX($angle);
+  }
+}
+
 @mixin center-absolute {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+@mixin absolute-coordinates-transform($x, $y, $a, $b) {
+  position: absolute;
+  top: $x;
+  left: $y;
+  transform: translate($a, $b);
 }
 

@@ -11,6 +11,18 @@
 
   @include skewX-parent-and-child(12deg);
 
+  @include respond-to(tab-port) {
+    width: 100%;
+    padding: 4rem;
+    padding-left: 7rem;
+  }
+
+  @include respond-to(phone) {
+    padding: 3rem;
+    padding-left: 4rem;
+    @include skewX-parent-and-child(0deg);
+  }
+
   &__shape {
     height: 15rem;
     width: 15rem;
@@ -23,6 +35,13 @@
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem);
     position: relative;
+
+    @include respond-to(tab-port) {
+      height: 12rem;
+      width: 12rem;
+      margin-bottom: 1rem;
+    }
+
   }
 
   &__img {

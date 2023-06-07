@@ -49,3 +49,37 @@
   transform: translate($a, $b);
 }
 
+
+// Media quiery manager
+
+/*
+0 - 600px: Phone
+600px - 900px: Tablet portrait
+900px - 1200px: Tablet landscape
+1200px - 1800px: Normal screen
+1800px + : Big screen
+
+$breakpoint-small: 37.5em; // 600px
+$breakpoint-medium: 56.25em; // 900px
+$breakpoint-large: 75em; // 1200px
+$breakpoint-x-large: 112.5em; // 1800px
+
+ORDER: Base + Typography > General Layout + Grid > Page Layout > Components > Utilities
+*/
+@mixin respond-to($media-type) {
+  @if $media-type == phone {
+    @media (max-width: $breakpoint-small) { @content };
+  }
+
+  @if $media-type == tab-port {
+    @media (max-width: $breakpoint-medium) { @content };
+  }
+
+  @if $media-type == tab-land {
+    @media (max-width: $breakpoint-large) { @content };
+    }
+
+  @if $media-type == big-desktop {
+    @media (min-width: $breakpoint-x-large) { @content };
+  }
+}

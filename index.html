@@ -10,9 +10,58 @@
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
   </head>
   <body>
-    <!-- NAVIGATION SECTION -->
+    <!-- NAVIGATION COMPONENT -->
+    <div class="navigation">
+      <input
+        title="checkbox"
+        type="checkbox"
+        class="navigation__checkbox"
+        name="navigation"
+        id="navigation"
+      />
+      <label for="navigation" class="navigation__button">
+        <span class="navigation__icon">&nbsp;</span>
+      </label>
 
-    <!-- HEADER SECTION -->
+      <div class="navigation__background">&nbsp;</div>
+
+      <nav class="navigation__nav">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="#section-about" class="navigation__link">
+              <span>01</span>
+              <span>About Natours</span>
+            </a>
+          </li>
+          <li class="navigation__item">
+            <a href="#section-features" class="navigation__link">
+              <span>02</span>
+              <span>Your benefits</span>
+            </a>
+          </li>
+          <li class="navigation__item">
+            <a href="#section-tours" class="navigation__link">
+              <span>03</span>
+              <span>Popular tours</span>
+            </a>
+          </li>
+          <li class="navigation__item">
+            <a href="#section-stories" class="navigation__link">
+              <span>04</span>
+              <span>Stories</span>
+            </a>
+          </li>
+          <li class="navigation__item">
+            <a href="#section-book" class="navigation__link">
+              <span>05</span>
+              <span>Book now</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Page HEADER -->
     <header class="header">
       <div class="header__logo-box">
         <img src="img/logo-white.png" alt="Logo" class="header__logo" />
@@ -24,14 +73,16 @@
           <span class="heading-primary--sub">is where life happens</span>
         </h1>
 
-        <a class="btn btn--white btn--animated" href="#">Discover our tours</a>
+        <a class="btn btn--white btn--animated" href="#section-tours"
+          >Discover our tours</a
+        >
       </div>
     </header>
 
     <!-- MAIN -->
     <main>
       <!-- ABOUT SECTION -->
-      <section class="section-about">
+      <section class="section-about" id="section-about">
         <div class="u-center-text u-margin-bottom-big">
           <h2 class="heading-secondary">
             Exciting tours for adventurous people
@@ -82,7 +133,7 @@
       </section>
 
       <!-- FEATURES SECTION -->
-      <section class="section-features">
+      <section class="section-features" id="section-features">
         <div class="row">
           <!-- Feature 1 -->
           <div class="col-1-of-4">
@@ -140,7 +191,7 @@
       </section>
 
       <!-- TOURS SECTION -->
-      <section class="section-tours">
+      <section class="section-tours" id="section-tours">
         <div class="u-center-text u-margin-bottom-big">
           <h2 class="heading-secondary">Most popular tours</h2>
         </div>
@@ -258,7 +309,7 @@
       </section>
 
       <!-- Stories SECTION -->
-      <section class="section-stories">
+      <section class="section-stories" id="section-stories">
         <div class="bg-video">
           <video class="bg-video__content" autoplay muted loop>
             <source src="/img/video.mp4" type="video/mp4" />
@@ -334,7 +385,7 @@
       </section>
 
       <!-- Booking SECTION -->
-      <section class="section-book">
+      <section class="section-book" id="section-book">
         <div class="row">
           <div class="book">
             <div class="book__form">
@@ -404,6 +455,7 @@
       </section>
     </main>
 
+    <!-- Page FOOTER -->
     <footer class="footer">
       <div class="footer__logo-box">
         <img class="footer__logo" src="img/logo-green-2x.png" alt="Full Logo" />
@@ -433,11 +485,48 @@
         <div class="col-1-of-2">
           <p class="footer__copyright">
             Built by
-            <a href="#" class="footer__link">Alberto Garcia Leal</a> for the online course
-            <a href="#" class="footer__link">Advanced CSS and SASS</a>. All the rights reserved. &copy;
+            <a href="#" class="footer__link">Alberto Garcia Leal</a> for the
+            online course
+            <a href="#" class="footer__link">Advanced CSS and SASS</a>. All the
+            rights reserved. &copy;
           </p>
         </div>
       </div>
     </footer>
+
+    <!-- Popup COMPONENT -->
+    <div class="popup" id="popup">
+      <div class="popup__content">
+        <div class="popup__left">
+          <img class="popup__img" src="img/nat-8.jpg" alt="Tour photo" />
+          <img class="popup__img" src="img/nat-9.jpg" alt="Tour photo" />
+        </div>
+        <div class="popup__right">
+          <a href="#section-tours" class="popup__close">&times;</a>
+          <h2 class="heading-secondary u-margin-bottom-small">
+            Start booking now
+          </h2>
+          <h3 class="heading-tertiary u-margin-bottom-small">
+            Important &ndash; Please read these terms before booking
+          </h3>
+          <p class="popup__text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Consequuntur iure voluptatibus laborum voluptate, nisi laboriosam
+            qui! Ullam, impedit. Laudantium rerum ipsam quasi eum illo pariatur
+            perspiciatis laboriosam at ut! Esse enim labore voluptatem nesciunt
+            ipsam, neque harum corrupti architecto quaerat provident doloribus,
+            asperiores voluptatum repudiandae dicta. Voluptatem labore expedita
+            voluptas, amet aliquid vero neque similique architecto. Esse numquam
+            tenetur obcaecati modi dignissimos consequatur exercitationem ipsum
+            facilis labore et similique est maiores, veniam veritatis
+            recusandae. Maiores optio culpa, architecto hic esse, veritatis nemo
+            odio, ullam reiciendis perferendis totam? Eveniet quidem ab animi
+            placeat praesentium. Fugit mollitia voluptas nesciunt alias, modi
+            omnis?
+          </p>
+          <a href="#" class="btn btn--green">Book now</a>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

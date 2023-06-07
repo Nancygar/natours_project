@@ -3,9 +3,17 @@
   padding: 10rem 0;
   font-size: 1.4rem;
 
+  @include respond-to(tab-port) { // width < 600?
+    padding: 8rem 0;
+  }
+
   &__logo-box {
     text-align: center;
     margin-bottom: 8rem;
+
+    @include respond-to(tab-port) { // width < 600?
+      margin-bottom: 6rem;
+    }
   }
 
   &__logo {
@@ -16,8 +24,14 @@
   &__navigation {
     border-top: 1px solid $color-gray-light-2;
     padding-top: 2rem;
-    display: inline-block
-  
+    display: inline-block;
+    
+    @include respond-to(tab-port) { // width < 600?
+      display: block;
+      text-align: center;
+      width: 100%;
+      margin: 0 auto;
+    }
   }
 
   &__list {
@@ -54,5 +68,12 @@
     padding-top: 2rem;
     width: 80%;
     float: right;
+
+    @include respond-to(tab-port) { // width < 600?
+      text-align: center;
+      width: 100%;
+      float: none;
+      margin: 0 auto;
+    }
   }
 }
